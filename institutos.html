@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Institutos</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		
+<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery-3.3.1.slim.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/datos.js"></script>
+		<script src="js/institutos.js"></script>
+		<script src="js/ajusteHeader.js"></script>
+	</head>
+	<body onload="inicioInstitutos();ajusteHeader();">
+		
+<!-- 		inicio header -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+	  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+	    <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="botonHome">
+	      <li class="nav-item" id="irIndex">
+
+	      </li>
+	    </ul>
+	    
+   	    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+		    <div class="btn-group">
+	            <button class="btn dropdown-toggle navbar-palabras" data-toggle="dropdown" data-hover="dropdown">Altas<span class="caret"></span></button>
+	            <ul class="dropdown-menu">
+	                <li class="nav-item"><a class="nav-link" href="#">Cursos</a></li>
+	                <li class="nav-item"><a class="nav-link" href="#">Ediciones</a></li>
+	                <li class="nav-item"><a class="nav-link" href="#">Programas</a></li>
+	            </ul>
+	        </div>
+			<div class="btn-group">
+	            <button class="btn dropdown-toggle navbar-palabras" data-toggle="dropdown" data-hover="dropdown">Consultas<span class="caret"></span></button>
+	            <ul class="dropdown-menu">
+	                <li class="nav-item"><a class="nav-link" href="#">Estudiante</a></li>
+	                <li class="nav-item"><a class="nav-link" href="docentes.html">Docente</a></li>
+       				<li class="nav-item"><a class="nav-link" href="institutos.html">Cursos</a></li>
+	                <li class="nav-item"><a class="nav-link" href="institutos.html">Ediciones</a></li>
+	                <li class="nav-item"><a class="nav-link" href="#">Programas</a></li>
+	            </ul>
+	        </div>
+        </ul>
+	    
+
+	    
+
+	    
+			<ul class="navbar-nav ml-1 mt-2 mt-lg-0 modificarInicio">
+				<li class="nav-item" id=iniciarSesionInstituto></li>
+				<li class="nav-item" id= registrarseInstituto></li>
+			</ul>
+			<ul class="navbar-nav ml-1 mt-2 mt-lg-0">
+				<li class="nav-item" id="agregarLogin"></li>
+			</ul>
+	  </div>
+	</nav>
+	<!-- 		fin header -->
+	
+	<div class="container navbar-borde">
+  <div class="card border-0 shadow my-5">
+    <div class="card-body p-5" >
+
+	<div class="container-fluid"  >
+	
+	<div class="row">
+	<div class="page-header navbar-titulo" style="margin-left:38%;" id= "tituloC">
+			<h3 align="center">Consulta de cursos </h3>
+		</div>
+		<div class="page-header navbar-titulo" style="margin-left:37%;" id= "tituloE">
+			<h3 align="center">Consulta de ediciones </h3>
+		</div>
+		<div class="col-12 mt-2 navbar-beige">
+			<ul class="nav nav-pills flex-column text-center mt-3 hideListasIns">
+				<li class="nav-item active"><a class="nav-link active bg-dark">INSTITUTOS</a>
+					<div class="list-group" id="listaInstitutos">
+
+					</div>
+				</li>
+
+			</ul>
+			<ul class="nav nav-pills flex-column text-center mt-3 hideListasIns">
+				<li class="nav-item active"><a class="nav-link active bg-dark">CATEGORIAS</a>
+					<div class="list-group">
+						<a href="#" class="list-group-item list-group-item-action">Social</a>
+						<a href="#" class="list-group-item list-group-item-action">Industrial</a>
+						<a href="#" class="list-group-item list-group-item-action">Educativos</a>
+						<a href="#" class="list-group-item list-group-item-action">Interdisciplinario</a>
+						
+					</div>
+				</li>
+
+			</ul>
+
+		</div>
+		<div class="col-2 py-4 right-menu text-center ocultarEdis" align="right">
+
+			</div>
+		</div>	
+		</div>
+		</div>	
+		</div>
+		</div>
+</body>
+</html>

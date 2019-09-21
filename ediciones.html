@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Usuarios</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="js/popper.min.js"></script>
+<script src="js/font-awesome.js"></script>
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script src="js/datos.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- <script src="js/cursos.js"></script> -->
+<script src="js/ediciones.js"></script>
+<script src="js/ajusteHeader.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/bootstrap-multiselect.css"
+	type="text/css">
+<script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+</head>
+<body onload="inicioEdicion();ajusteHeader();">
+
+	<!-- 		inicio header -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="botonHome">
+				<li class="nav-item" id="irIndex"></li>
+			</ul>
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+				<form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="search"
+						placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				</form>
+			</ul>
+			<ul class="navbar-nav ml-1 mt-2 mt-lg-0 modificarInicio">
+				<li class="nav-item" id="iniciarSesionEdicion"></li>
+				<li class="nav-item" id="registrarseEdicion"></li>
+			</ul>
+			<ul class="navbar-nav ml-1 mt-2 mt-lg-0">
+				<li class="nav-item" id="agregarLogin"></li>
+			</ul>
+		</div>
+	</nav>
+	<!-- 		fin header -->
+	<!-- 		inicio detalle-->
+
+	<div class="col-12 py-4 ocultarEdis" align="center">
+
+		<!-- Title-->
+		<div class="row">
+			<div class="col-10 mt-2">
+				<section id="detalleEdicion"></section>
+			</div>
+			<div class="col-2 py-4 right-menu text-center ocultarEdis"
+				align="right">
+				<ul class="nav nav-pills flex-column" id="menuEdi">
+<!-- 					<li class="nav-item active"><a class="nav-link active">DOCENTES</a> -->
+<!-- 						<ul class="list-group" id="docentesEdicion"> -->
+
+<!-- 						</ul></li> -->
+					<li class="nav-item active"><button type="button" class="btn btn-secondary mt-1 w-100"
+						id="btnInscribir">INSCRIBIRSE</button>
+					</li> 
+				</ul>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-8 mt-2">
+			
+			<ul class="nav nav-pills mb-2" id="pills-tab" role="tablist">
+				  <li class="nav-item">
+				    <a class="btn btn-dark active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Docentes</a>
+				  </li>
+				  <li class="nav-item ml-1">
+				    <a class="btn btn-dark" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Inscripciones</a>
+				  </li>
+				  <li class="nav-item ml-1">
+				    <a class="btn btn-dark" id="pills-profile-tab1" data-toggle="pill" href="#pills-profile1" role="tab" aria-controls="pills-profile1" aria-selected="false">Aceptados</a>
+				  </li>
+			</ul>
+			<div class="tab-content" id="pills-tabContent">
+			
+			  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+				<ul class="nav nav-pills flex-column" id="menuEdi">
+					<li class="nav-item active"><a class="nav-link active">DOCENTES</a>
+						<ul class="list-group" id="docentesEdicion">
+						</ul>
+					</li>
+<!-- 					<li class="nav-item active"><button type="button" class="btn btn-secondary mt-1 w-100" -->
+<!-- 						id="btnInscribir">INSCRIBIRSE</button> -->
+<!-- 					</li>  -->
+				</ul>
+				
+			  </div>
+			  
+			  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+  					<div class="col-10 mt-2" id="selecEst">
+						<table class="table table-hover">
+						  <thead class="thead-light">
+						    <tr>
+						      <th scope="col">Nombre</th>
+						      <th scope="col">Fecha inscripción</th>
+						      <th scope="col">Inscripción</th>
+						      <th scope="col">Estado</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <th scope="row">Adrian Weiss</th>
+						      <td>18/08/19</td>
+						      <td>
+								<div class="custom-control custom-checkbox">
+							    	<input type="checkbox" class="custom-control-input" id="ac1">
+							    	<label class="custom-control-label" for="ac1">Aceptar</label>
+							    </div>
+							    <div class="custom-control custom-checkbox">
+							    	<input type="checkbox" class="custom-control-input" id="ac2">
+							    	<label class="custom-control-label" for="ac2">Rechazar</label>
+							    </div>
+								
+						      	</td>
+						      <td>Inscripto</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">Cecilia Garrido</th>
+						      <td>22/08/19</td>
+						      <td>
+								<div class="custom-control custom-checkbox">
+								  <input type="checkbox" class="custom-control-input" checked>
+								  <label class="custom-control-label">Aceptar</label>
+								</div>
+						      	<div class="custom-control custom-checkbox">
+						      	<input type="checkbox" class="custom-control-input"> 
+						      		<label class="custom-control-label">Rechazar</label>
+						      	</div>
+						      	</td>
+						      <td>Aceptada</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">Rodrigo Cotelo</th>
+						      <td>03/09/19</td>
+						      <td>
+							      <div class="custom-control custom-checkbox">
+							      	<input type="checkbox" class="custom-control-input" disabled>
+							      		<label class="custom-control-label">Aceptar</label>
+							      	</div>
+							      	<div class="custom-control custom-checkbox">
+							      	<input type="checkbox" class="custom-control-input" disabled>
+							      		<label class="custom-control-label">Rechazar</label>
+							      	</div>
+						      	</td>
+						      <td>Rechazada</td>
+						    </tr>
+						  </tbody>
+						</table>
+					<button class="btn btn-secondary">Guardar selección</button>
+				</div>
+			  </div>
+			  
+			  <div class="tab-pane fade" id="pills-profile1" role="tabpanel" aria-labelledby="pills-profile-tab1">
+				<div>
+				<table class="table table-hover">
+						  <thead class="thead-light">
+						    <tr>
+						      <th scope="col">Edición</th>
+						      <th scope="col">Estudiante</th>
+						      <th scope="col">Fecha</th>
+						    </tr>
+						  </thead>
+						  <tbody id="aceptadosEdiciones">
+						 </tbody>
+				</table>
+				</div>
+			  </div>
+			</div>
+			
+			
+
+		</div>
+		</div>
+	</div>
+	<!-- 		inicio formulario de alta -->
+	<div id="registro" class="col-md-4 col-md-offset-4"
+		style="margin-left: 31%;">
+		<div class="page-header ocultarForm">
+			<h3 align="center">Ingrese sus datos</h3>
+		</div>
+		<form onsubmit="return registrarEdicion();" class="ocultarForm">
+			<div class="form-group">
+				<label for="cursos">Curso</label> <select
+					class="selectpicker form-control">
+					<optgroup label="INCO" id="INCO">
+
+					</optgroup>
+					<optgroup label="IMERL" id="IMERL">
+
+					</optgroup>
+					<optgroup label="Física" id="Fisica">
+
+					</optgroup>
+					<optgroup label="IMPII" id="IMPII">
+
+					</optgroup>
+					<optgroup label="Eléctrica" id="Electrica">
+
+					</optgroup>
+					<optgroup label="DISI" id="DISI">
+
+					</optgroup>
+				</select>
+
+
+			</div>
+			<div class="form-group">
+				<label for="nombre">Nombre</label> <input type="text"
+					class="form-control" id="nombre" placeholder="Nombre" required
+					oninvalid="setCustomValidity('El campo nombre es obligatorio')"
+					oninput="setCustomValidity('')">
+			</div>
+			<div class="form-group">
+				<label for="fechaNacimiento">Fecha de inicio</label> <input
+					type="date" id="fechaInicio" class="form-control" name="trip-start"
+					max="2019-12-31" required
+					oninvalid="setCustomValidity('El campo fecha de inicio es obligatorio')"
+					oninput="setCustomValidity('')">
+			</div>
+			<div class="form-group">
+				<label for="fechaNacimiento">Fecha de fin</label> <input type="date"
+					id="fechaFin" class="form-control" name="trip-start" required
+					oninvalid="setCustomValidity('El campo fecha de fin es obligatorio')"
+					oninput="setCustomValidity('')">
+			</div>
+			<div class="form-group">
+				<label for="cupo">Cupo</label> <input type="text"
+					class="form-control" id="cupo" placeholder="Cupo" pattern="[0-9]+"
+					oninput="setCustomValidity('')">
+			</div>
+			<div class="form-group">
+				<label for="docentes">Docentes</label>
+				<div class="container">
+					<div class="example">
+						<select id="boot-multiselect-demo1" multiple="multiple" required>
+							<optgroup label="INCO" id="INCO1">
+							</optgroup>
+							<optgroup label="IMERL" id="IMERL1">
+							</optgroup>
+							<optgroup label="Física" id="Fisica1">
+							</optgroup>
+							<optgroup label="IMPII" id="IMPII1">
+							</optgroup>
+							<optgroup label="Eléctrica" id="Electrica1">
+							</optgroup>
+							<optgroup label="DISI" id="DISI1">
+							</optgroup>
+						</select>
+
+					</div>
+
+
+				</div>
+			</div>
+			<button type="submit" class="btn btn-primary" id="boton">Registrarse
+			</button>
+		</form>
+	</div>
+
+
+
+
+
+
+	<!-- 		fin formulario de alta -->
+
+
+</body>
+</html>

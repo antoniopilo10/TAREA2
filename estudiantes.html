@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Docentes</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="js/font-awesome.js"></script>
+<script src="js/datos.js"></script>
+<script src="js/usuarios.js"></script>
+<script src="js/ajusteHeader.js"></script>
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+</head>
+<body onload="inicioEstudiantes();ajusteHeader();">
+
+	<!-- 		inicio header -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="botonHome">
+				<li class="nav-item" id="irIndex"></li>
+			</ul>
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+				<form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="search"
+						placeholder="Estudiante" aria-label="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				</form>
+			</ul>
+			<ul class="navbar-nav ml-1 mt-2 mt-lg-0 modificarInicio">
+				<li class="nav-item" id="iniciarSesionEstudiante"></li>
+				<li class="nav-item" id="registrarseEstudiante"></li>
+			</ul>
+			<ul class="navbar-nav ml-1 mt-2 mt-lg-0">
+				<li class="nav-item" id="agregarLogin"></li>
+			</ul>
+		</div>
+	</nav>
+	<!-- 		fin header -->
+
+	<div class="col-9 py-4" align="center">
+
+		<!-- Title-->
+		<div class="row">
+			<div class="col-12 mt-2" align="right">
+				<section id="estudiantes"></section>
+				<!--              	<nav class="float-right"> -->
+				<!-- 				  <ul class="pagination" align="right">  OCULTAR CUANDO NO ES NECESARIO -->
+				<!-- 				    <li class="page-item" id="pagPre"><a class="page-link" onclick="paginadoAnterior()">Previous</a></li> -->
+				<!-- 				    <li class="page-item" id="pagNext"><a class="page-link" onclick="paginadoSiguiente()">Next</a></li> -->
+				<!-- 				  </ul> -->
+				<!-- 				</nav> -->
+
+
+			</div>
+			<div class="col-12 mt-2" align="center"></div>
+		</div>
+
+		<div class="row pt-5"></div>
+	</div>
+	
+
+				<ul class="nav nav-pills flex-column" id="tituloResul">
+					<li class="nav-item active"><a class="nav-link active">INSCRIPCIONES</a>
+						<ul class="list-group" id="docentesEdicion">
+						</ul>
+					</li>		
+					</ul>		
+			  <div class="row" id="tablaResul">
+  					<div class="col-10 mt-2" id="l">
+						<table class="table table-hover">
+						  <thead class="thead-light">
+						    <tr>
+						      <th scope="col">Nombre de la edición</th>
+						      <th scope="col">Fecha inscripción</th>
+						      <th scope="col">Estado</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <th scope="row">Flor del Ceibo - 2012</th>
+						      <td>15/7/2012</td>
+						      <td>Rechazado</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">Flor del Ceibo - 2018</th>
+						      <td>10/3/2018</td>
+						      <td>Aceptado</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">Dalavuelta - 2018</th>
+						      <td>2/8/2017</td>
+						      <td>Aceptado</td>
+						    </tr>
+						     <tr>
+						      <th scope="row">Inclusión Energética - 2019</th>
+						      <td>23/2/2019</td>
+						      <td>Aceptado</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">Taller de robótica educativa - 2017</th>
+						      <td>20/2/2017</td>
+						      <td>Rechazado</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">Taller de robótica educativa - 2019-2</th>
+						      <td>3/9/2019</td>
+						      <td>Rechazado</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">Participación en investigación sobreel empleo del juego Komikan como recurso didáctico en la Escuela - 2019</th>
+						      <td>22/7/2019</td>
+						      <td>Aceptado</td>
+						    </tr>
+						     <tr>
+						      <th scope="row">MicroBit - 2019</th>
+						      <td>14/7/2019</td>
+						      <td>Inscripto</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">Talleres plenarios - 2019</th>
+						      <td>7/3/2019</td>
+						      <td>Aceptado</td>
+						    </tr>
+						    <tr>
+						      <th scope="row">Seminarios de Resolución de Problemas - 2019</th>
+						      <td>6/8/2019</td>
+						      <td>Aceptado</td>
+						    </tr>
+						     <tr>
+						      <th scope="row">EFI Robótica</th>
+						      <td>20/9/2019</td>
+						      <td>N/A</td>
+						    </tr>
+						  </tbody>
+						</table>
+				</div>
+				</div>
+
+
+
+</body>
+</html>

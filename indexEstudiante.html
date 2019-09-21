@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <meta charset="UTF-8"> -->
+<!-- <title>Insert title here</title> -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>edEXT - Ingreso estudiante</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/font-awesome.js"></script>
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/ajusteHeader.js"></script>
+<script src="js/datos.js"></script>
+<script src="js/cursos.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="ajusteHeader();  cargarLoginIndx()"> <!--  agregar cargarLoginProgramas(); cuando este hecho -->
+<!-- Navigation -->
+  <!-- 		inicio header -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-dark mb-5 shadow">
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="botonHome">
+				<li class="nav-item" id="irIndex"></li>
+			</ul>
+
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+				<div class="btn-group">
+					<button class="btn dropdown-toggle navbar-palabras" data-toggle="dropdown"
+						data-hover="dropdown">
+						Inscripciones<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li class="nav-item" id="inscrEdi">
+						</li>
+						<li class="nav-item" id="listResEdi">
+						</li>
+					</ul>
+				</div>
+				<div class="btn-group">
+				</div>
+				<div class="btn-group">
+					<button class="btn dropdown-toggle navbar-palabras" data-toggle="dropdown"
+						data-hover="dropdown">
+						Consultas<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li class="nav-item" id="loginEstudiantes">
+<!-- 						<a class="nav-link" -->
+<!-- 							href="estudiantes.html?ingreso=estudiante">Estudiante</a> -->
+							</li>
+						<li class="nav-item" id="loginDocentes">
+<!-- 						<a class="nav-link" href="docentes.html?ingreso=estudiante">Docente</a> -->
+						</li>
+						<li class="nav-item" id= "loginCursos"></li>
+<!-- 						<a class="nav-link" -->
+<!-- 							href="institutos.html?consulta=cursos&ingreso=estudiante">Cursos</a> -->
+						<li class="nav-item" id= "loginInstituto">
+<!-- 						<a class="nav-link" -->
+<!-- 							href="institutos.html?consulta=ediciones&ingreso=estudiante">Ediciones</a> -->
+							</li>
+						<li class="nav-item"><a class="nav-link" href="#">Programas</a></li>
+					</ul>
+				</div>
+			</ul>
+
+
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
+				<form class="form-inline my-2 my-lg-0 ">
+					<input class="form-control mr-sm-2 " type="search"
+						placeholder="Cursos" aria-label="Search" id="buscador"
+						onkeyup="filtrarDatos()">
+<!-- 					<button class="btn  btn-outline-success my-2  my-sm-0 navbar-search " type="submit ">Search</button> -->
+				</form>
+			</ul>
+			<ul class="navbar-nav ml-1 mt-2 mt-lg-0 modificarInicio">
+				<li class="nav-item"><a class="nav-link" style="color:#f3e9d4;"  
+				href="usuarios.html?loginEst&ingreso=estudiante">Iniciar
+						sesión</a></li>
+				<li class="nav-item "><a class="nav-link" style="color:#f3e9d4;"  
+					href="registrarse.html?ingreso=estudiante">Registrarse</a></li>
+			</ul>
+			<ul class="navbar-nav ml-1 mt-2 mt-lg-0">
+				<li class="nav-item" id="agregarLogin"></li>
+			</ul>
+		</div>
+	</nav>
+	<!-- 		fin header -->
+
+<!-- Page Content -->
+	<!-- 	inicio contenido principal -->
+<div class="container navbar-borde">
+  <div class="card border-0 shadow my-5">
+    <div class="card-body p-5" >
+    
+
+	<div class="container-fluid"  >
+		<div class="row">
+			<div class="col-2 py-4 left-menu navbar-titulo" align="left">
+				<ul class="nav nav-pills flex-column navbar-titulo">
+					<li class="nav-item active"><a class="nav-link active bg-dark">INSTITUTOS</a>
+					</li>
+					<li class="nav-item"><a class="nav-link navbar-titulo"
+						href="institutos.html?id=INCO&ingreso=estudiante"> INCO </a></li>
+					<li class="nav-item"><a class="nav-link navbar-titulo"
+						href="institutos.html?id=INCO&ingreso=estudiante">IMERL</a></li>
+					<li class="nav-item"><a class="nav-link navbar-titulo"
+						href="institutos.html?id=INCO&ingreso=estudiante">Física</a></li>
+					<li class="nav-item"><a class="nav-link navbar-titulo"
+						href="institutos.htmlid=INCO&ingreso=estudiante">IMPII</a></li>
+					<li class="nav-item"><a class="nav-link navbar-titulo"
+						href="institutos.html?id=INCO&ingreso=estudiante">Eléctrica</a></li>
+					<li class="nav-item"><a class="nav-link navbar-titulo"
+						href="institutos.html?id=INCO&ingreso=estudiante">DISI</a></li>
+				</ul>
+				<ul class="nav nav-pills flex-column">
+					<li class="nav-item active"><a class="nav-link active bg-dark">CATEGORIAS</a>
+					</li>
+					<li class="nav-item"><a class="nav-link navbar-titulo" >
+<!-- 					href="cursos.html?ingreso=estudiante" -->
+							Social </a></li>
+					<li class="nav-item"><a class="nav-link navbar-titulo"> 
+<!-- 					href="cursos.html?ingreso=estudiante"> -->
+							Industrial </a></li>
+					<li class="nav-item"><a class="nav-link navbar-titulo">
+<!-- 					 href="cursos.html?ingreso=estudiante"> -->
+							Educativos </a></li>
+					<li class="nav-item"><a class="nav-link navbar-titulo">
+<!-- 					 href="cursos.html?ingreso=estudiante"> -->
+							Interdisciplinario </a></li>
+				</ul>
+			</div>
+
+			<div class="col-9 py-4" align="center">
+
+				<!-- Title-->
+				<div class="row">
+					<div class="col-12 mt-2" align="right">
+						<section id="cursos"></section>
+						<nav class="float-right">
+<!-- 							<ul class="pagination" align="right"> -->
+<!-- 								OCULTAR CUANDO NO ES NECESARIO -->
+<!-- 								<li class="page-item" id="pagPre"><a class="page-link" -->
+<!-- 									onclick="paginadoAnterior()">Previous</a></li> -->
+<!-- 								<li class="page-item" id="pagNext"><a class="page-link" -->
+<!-- 									onclick="paginadoSiguiente()">Next</a></li> -->
+<!-- 							</ul> -->
+						</nav>
+
+
+					</div>
+					<div class="col-12 mt-2" align="center"></div>
+				</div>
+
+				<div class="row pt-5"></div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- 	fin contenido principal -->
+      
+
+    </div>
+  </div>
+</div>
+</body>
+</html>

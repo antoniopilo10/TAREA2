@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Usuario</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/font-awesome.js"></script>
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/usuarios.js"></script>
+<script src="js/datos.js"></script>
+<script src="js/cursos.js"></script>
+<link rel="stylesheet" href="css/style.css">
+			<script src="js/ajusteHeader.js"></script>
+		<script src="js/jquery-3.3.1.slim.min.js"></script>
+</head>
+<body onload="inicioUsuarios();ajusteHeader();">
+
+	<!-- 		inicio header -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="botonHome">
+				<li class="nav-item" id="irIndex"></li>
+			</ul>
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+				<div class="btn-group">
+					<button class="btn dropdown-toggle navbar-palabras"
+						data-toggle="dropdown" data-hover="dropdown">
+						Inscripciones<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li class="nav-item"><a class="nav-link"
+							href="institutos.html?inscripcion=ediciones&ingreso=visitante">Edición
+								de curso</a></li>
+					</ul>
+				</div>
+				<div class="btn-group">
+					<button class="btn dropdown-toggle navbar-palabras"
+						data-toggle="dropdown" data-hover="dropdown">
+						Altas<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li class="nav-item"><a class="nav-link"
+							href="cursos.html?alta&ingreso=visitante">Cursos</a></li>
+						<li class="nav-item"><a class="nav-link"
+							href="ediciones.html?alta&ingreso=visitante">Ediciones</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Programas</a></li>
+					</ul>
+				</div>
+				<div class="btn-group">
+					<button class="btn dropdown-toggle navbar-palabras"
+						data-toggle="dropdown" data-hover="dropdown">
+						Consultas<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li class="nav-item" id="loginEstudiantes">
+							<!-- 						<a class="nav-link" --> <!-- 							href="estudiantes.html?ingreso=estudiante">Estudiante</a> -->
+						</li>
+						<li class="nav-item" id="loginDocentes">
+							<!-- 						<a class="nav-link" href="docentes.html?ingreso=estudiante">Docente</a> -->
+						</li>
+						<li class="nav-item" id="loginCursos"></li>
+						<!-- 						<a class="nav-link" -->
+						<!-- 							href="institutos.html?consulta=cursos&ingreso=estudiante">Cursos</a> -->
+						<li class="nav-item" id="loginInstituto">
+							<!-- 						<a class="nav-link" --> <!-- 							href="institutos.html?consulta=ediciones&ingreso=estudiante">Ediciones</a> -->
+						</li>
+						<li class="nav-item"><a class="nav-link" href="#">Programas</a></li>
+					</ul>
+					
+				</div>
+			</ul>
+<!-- 			<ul class="navbar-nav mr-auto mt-2 mt-lg-0"> -->
+<!-- 				<form class="form-inline my-2 my-lg-0"> -->
+<!-- 					<input class="form-control mr-sm-2" type="search" -->
+<!-- 						placeholder="Search" aria-label="Search"> -->
+<!-- 				</form> -->
+<!-- 			</ul> -->
+			<ul class="navbar-nav navbar-palabra ml-1 mt-2 mt-lg-0">
+				<li class="nav-item navbar-palabra" id="cargarSesion"></li>
+			</ul>
+			<ul class="navbar-nav ml-1 mt-2 mt-lg-0 modificarInicio">
+				<li class="nav-item" id="iniciarSesionUsuario"></li>
+				<li class="nav-item" id="cargarRegistrarse">
+					<!-- 				<a class="nav-link" href="registrarse.html">Registrarse</a> -->
+				</li>
+			</ul>
+			<ul class="navbar-nav ml-1 mt-2 mt-lg-0">
+				<li class="nav-item" id="agregarLogin"></li>
+			</ul>
+		</div>
+	</nav>
+	<!-- 		fin header -->
+	<!-- 		inicio detalle usuario -->
+	
+
+	<div class="col-12 py-4" id= "detalleUsuario" align="center">
+
+		<!-- Title-->
+		<div class="row">
+			<div class="col-10 mt-2">
+				<section id="usuario"></section>
+
+				<!--              	<button onclick="paginadoAnterior()">ANT</button> -->
+				<!--              	<button onclick="paginadoSiguiente()">NEXT</button> -->
+
+			</div>
+			<div class="col-2 py-4 right-menu" align="right">
+				<ul class="nav nav-pills flex-column" id="menuEdi">
+					<li class="nav-item active"><a class="nav-link active">EDICIONES</a>
+						<div id="edicionesUsuario"></div></li>
+					<!--  aca cargar cosas de edicion-->
+				</ul>
+				<ul class="nav nav-pills flex-column" id="menuProg">
+					<li class="nav-item active"><a class="nav-link active">PROGRAMAS</a>
+						<div id="programasEstudiante"></div></li>
+					<!--  aca cargar cosas de edicion-->
+				</ul>
+			</div>
+		</div>
+
+		<div class="row pt-5"></div>
+	</div>
+
+
+	<!-- 	incio iniciar sesión  -->
+	<div class="container navbar-borde col-md-6 col-md-offset-5" id="loginDoc">
+  <div class="card border-0 shadow my-5 col-md-11" style="margin-left:4%;">
+    <div class="card-body p-5" >
+<div class="col-md-9 col-md-offset-7" style="margin-left:12%;">
+		<div class="page-header navbar-titulo">
+			<h3 align="center">Ingrese sus datos</h3>
+		</div>
+		<form>
+			<div class="form-group">
+				<label for="nickname">Usuario</label> <input type="text"
+					class="form-control" id="nicknameCorreoD"
+					placeholder="Ingrese su nickname o correo" required
+					oninvalid="setCustomValidity('Es necesario que ingrese un nickname o correo para iniciar sesión')"
+					oninput="setCustomValidity('')">
+			</div>
+			<div class="form-group">
+				<label for="contrasenia">Contraseña</label> <input type="password"
+					class="form-control" id="contraseniaD" placeholder="Contraseña"
+					required
+					oninvalid="setCustomValidity('Debe ingresar la contraseña para continuar')"
+					oninput="setCustomValidity('')">
+			</div>
+			<button type="button" class="btn navbar-search"
+				onclick="loguearDocente();">Iniciar sesión</button>
+		</form>
+	</div>
+				</div>
+				</div>
+	</div>
+
+	<div class="container navbar-borde col-md-6 col-md-offset-5" id="loginEst">
+  <div class="card border-0 shadow my-5 col-md-11" style="margin-left:4%;">
+    <div class="card-body p-5" >
+<div class="col-md-9 col-md-offset-7" style="margin-left:12%;">
+		<div class="page-header navbar-titulo">
+			<h3 align="center">Ingrese sus datos</h3>
+		</div>
+		<form>
+			<div class="form-group">
+				<label for="nickname">Usuario</label> <input type="text"
+					class="form-control" id="nicknameCorreoE"
+					placeholder="Ingrese su nickname o correo" required
+					oninvalid="setCustomValidity('Es necesario que ingrese un nickname o correo para iniciar sesión')"
+					oninput="setCustomValidity('')">
+			</div>
+			<div class="form-group">
+				<label for="contrasenia">Contraseña</label> <input type="password"
+					class="form-control" id="contraseniaE" placeholder="Contraseña"
+					required
+					oninvalid="setCustomValidity('Debe ingresar la contraseña para continuar')"
+					oninput="setCustomValidity('')">
+			</div>
+			<button type="button" class="btn navbar-search"
+				onclick="loguearEstudiante();">Iniciar sesión</button>
+		</form>
+	</div>
+				</div>
+				</div>
+	</div>
+
+<div class="container navbar-borde col-md-6 col-md-offset-5" id="loginVisit">
+  <div class="card border-0 shadow my-5 col-md-11" style="margin-left:4%;">
+    <div class="card-body p-5" >
+<div class="col-md-9 col-md-offset-7" style="margin-left:12%;">
+		<div class="page-header navbar-titulo">
+			<h3 align="center">Ingrese sus datos</h3>
+		</div>
+		<form>
+			<div class="form-group">
+				<label for="nickname">Usuario</label> <input type="text"
+					class="form-control" id="nicknameCorreoV"
+					placeholder="Ingrese su nickname o correo" required
+					oninvalid="setCustomValidity('Es necesario que ingrese un nickname o correo para iniciar sesión')"
+					oninput="setCustomValidity('')">
+			</div>
+			<div class="form-group">
+				<label for="contrasenia">Contraseña</label> <input type="password"
+					class="form-control" id="contraseniaV" placeholder="Contraseña"
+					required
+					oninvalid="setCustomValidity('Debe ingresar la contraseña para continuar')"
+					oninput="setCustomValidity('')">
+			</div>
+			<button type="button" class="btn navbar-search ">Iniciar sesión</button>
+		</form>
+	</div>
+	</div>
+		</div>
+			</div>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Cursos</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="js/popper.min.js"></script>
+<script src="js/font-awesome.js"></script>
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script src="js/datos.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/cursos.js"></script>
+<script src="js/ediciones.js"></script>
+<script src="js/ajusteHeader.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/bootstrap-multiselect.css"
+	type="text/css">
+<script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+</head>
+<body onload="inicioCursos();ajusteHeader();">
+
+	<!-- 		inicio header -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="botonHome">
+				<li class="nav-item" id="irIndex"></li>
+			</ul>
+
+			<ul
+				class="navbar-nav navbar-palabra ml-1 mt-2 mt-lg-0 modificarInicio">
+				<li class="nav-item navbar-palabra" id=iniciarSesionCurso></li>
+				<li class="nav-item navbar-palabra" id=registrarseCurso></li>
+			</ul>
+			<ul class="navbar-nav ml-1 mt-2 mt-lg-0">
+				<li class="nav-item" id="agregarLogin"></li>
+			</ul>
+
+		</div>
+	</nav>
+	<!-- 		fin header -->
+
+	<!-- 	inicio contenido principal -->
+	<div  id="consulta" class="container navbar-borde">
+  <div class="card border-0 shadow my-5">
+    <div class="card-body p-5" >
+
+				<div class="container-fluid oculLateral">
+					<div class="row">
+						<div class="col-2 py-4 left-menu oculLateral navbar-titulo" align="left">
+							<ul class="nav nav-pills flex-column oculLateral">
+								<li class="nav-item active"><a class="nav-link active bg-dark">INSTITUTOS</a>
+								</li>
+								<li class="nav-item" id="menINCO"></li>
+								<li class="nav-item" id="menIMERL"></li>
+								<li class="nav-item" id="menFISICA"></li>
+								<li class="nav-item" id="menIMPII"></li>
+								<li class="nav-item" id="menELECTRICA"></li>
+								<li class="nav-item" id="menDISI"></li>
+							</ul>
+							<ul class="nav nav-pills flex-column">
+								<li class="nav-item active"><a class="nav-link active bg-dark">CATEGORIAS</a>
+								</li>
+								<li class="nav-item"><a class="nav-link"> <!-- 					href="cursos.html?ingreso=estudiante" -->
+										Social
+								</a></li>
+								<li class="nav-item"><a class="nav-link"> <!-- 					href="cursos.html?ingreso=estudiante"> -->
+										Industrial
+								</a></li>
+								<li class="nav-item"><a class="nav-link"> <!-- 					 href="cursos.html?ingreso=estudiante"> -->
+										Educativos
+								</a></li>
+								<li class="nav-item"><a class="nav-link"> <!-- 					 href="cursos.html?ingreso=estudiante"> -->
+										Interdisciplinario
+								</a></li>
+							</ul>
+						</div>
+
+						<div class="col-10 py-4" align="left">
+
+							<!-- Title-->
+							<div class="row">
+
+								<div class="col-11" align="left">
+									<section id="detalleCurso"></section>
+									<div id="listaCursos"  style="margin-left:15%;" ></div>
+									<div class="accordion" id="accordionEdiciones"></div>
+
+								</div>
+								
+							</div>
+							
+
+									<div class="row" >
+			<div class="col-12 mt-2" >
+<!-- 			los dos cositos  -->
+			<ul class="nav nav-pills mb-2" id="pills-tab" role="tablist" style="margin-left: 68%;" align="left">
+				  <li class="nav-item">
+				    <a class="btn active btn-pestania navbar-search" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Ediciones</a>
+				  </li>
+				  <li class="nav-item ml-1">
+				    <a class="btn btn-pestania navbar-search" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Programas</a>
+				  </li>
+				
+			</ul>
+<!-- 			fin de los dos cositos  -->
+			<div class="tab-content" id="pills-tabContent">
+			
+			  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+				<ul class="nav nav-pills flex-column" id="menuEdi">
+					
+						<ul class="nav nav-pills flex-column" id="menuEdi">
+										<li> 
+											<div id="edicionesCurso"></div></li>
+<!-- 										 aca cargar cosas de edicion -->
+									</ul>
+					
+<!-- 					<li class="nav-item active"><button type="button" class="btn btn-secondary mt-1 w-100" -->
+<!-- 						id="btnInscribir">INSCRIBIRSE</button> -->
+<!-- 					</li>  -->
+				</ul>
+				
+			  </div>
+			  
+			  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+  					<div class="col-12 mt-2" id="selecEst">
+							<ul class="nav nav-pills flex-column mt-4" id="menuProg">
+										<li>
+											<div id="programasCurso"></div></li>
+<!-- 										aca cargar cosas de programa -->
+									</ul>
+				</div>
+			  </div>
+			  
+			</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+			</div>
+							</div>
+							
+
+		</div>
+
+	</div>
+	<!-- 		inicio formulario de alta -->
+	<div  id="registro" class="container navbar-borde col-md-6 col-md-offset-5">
+		<div class="card border-0 shadow my-5 col-md-11"
+			style="margin-left: 4%;">
+			<div class="card-body p-5">
+				<div class="col-md-7 col-md-offset-7"
+					style="margin-left: 20%;">
+					<div class="page-header navbar-titulo">
+						<h3 align="center">Ingrese los datos</h3>
+					</div>
+					<form onsubmit="registrarCurso()">
+						<div class="form-group" id="contenidoLista">
+							<label for="listarInstitutos">Instituto</label> <select
+								class="form-control" id="institutosLista">
+
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="nombre">Nombre</label> <input type="text"
+								class="form-control" id="nombre" placeholder="Nombre" required
+								oninvalid="setCustomValidity('El campo nombre es obligatorio')"
+								oninput="setCustomValidity('')">
+						</div>
+						<div class="form-group">
+							<label for="descripcion">Descripción</label> <input type="text"
+								class="form-control" id="descripcion" placeholder="Descripción"
+								required
+								oninvalid="setCustomValidity('El campo descripción es obligatorio')"
+								oninput="setCustomValidity('')">
+						</div>
+						<div class="form-group">
+							<label for="duracion">Duración</label> <input type="text"
+								class="form-control" id="duracion" placeholder="Duración"
+								required
+								oninvalid="setCustomValidity('El campo duración es obligatorio')"
+								oninput="setCustomValidity('')">
+						</div>
+						<div class="form-group">
+							<label for="horas">Cantidad de horas</label> <input type="text"
+								class="form-control" id="horas" placeholder="Horas"
+								required="required" pattern="[0-9]+"
+								oninput="setCustomValidity('')">
+						</div>
+						<div class="form-group">
+							<label for="creditos">Cantidad de créditos</label> <input
+								type="number" class="form-control" id="creditos"
+								placeholder="Créditos" required pattern="[0-9]+"
+								oninput="setCustomValidity('')">
+						</div>
+						<div class="form-group">
+							<label for="url">URL</label> <input type="url"
+								class="form-control" id="url"
+								placeholder="http://www.ejemplo.com" required
+								oninvalid="setCustomValidity('El campo URL es obligatorio')"
+								oninput="setCustomValidity('')">
+						</div>
+						<div class="form-group">
+							<label for="previas">Previas</label>
+							<div class="container navbar-titulo">
+								<div class="example">
+									<select id="boot-multiselect-demo" multiple="multiple">
+										<optgroup label="INCO" id="INCO">
+										</optgroup>
+										<optgroup label="IMERL" id="IMERL">
+										</optgroup>
+										<optgroup label="IMPII" id="IMPII">
+										</optgroup>
+										<optgroup label="Eléctrica" id="Electrica">
+										</optgroup>
+										<optgroup label="DISI" id="DISI">
+										</optgroup>
+									</select>
+								</div>
+
+
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="categorias">Categorías</label> <select
+								id="multi-select-demo" multiple="multiple" required
+								oninvalid="setCustomValidity('Debe seleccionar al menos una categoría')"
+								onchange="setCustomValidity('')">
+								<optgroup label="Categorias" id="categorias">
+								</optgroup>
+							</select>
+						</div>
+
+
+						<button type="submit" class="btn navbar-search" id="boton">Registrarse
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 		fin formulario de alta -->
+
+	<!-- 	fin contenido principal -->
+
+</body>
+</html>
